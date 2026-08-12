@@ -1,0 +1,933 @@
+/* ==========================================================================
+   RESET & VARIÁVEIS DE CORES OFICIAIS (TOTAL AGRO & PETSHOP)
+   ========================================================================== */
+:root {
+  --color-primary: #00205B;
+  --color-primary-dark: #001438;
+  --color-secondary: #E30613;
+  --color-secondary-dark: #B8000A;
+  --color-accent-whatsapp: #25D366;
+  --color-whatsapp-hover: #1EBE5B;
+
+  --color-bg-light: #EBF0FA;
+  --color-bg-alt: #DFE7F5;
+  --color-bg-card: #FFFFFF;
+  --color-text-dark: #1A1D20;
+  --color-text-muted: #5A626A;
+  --color-border: #CBD5E1;
+
+  --shadow-sm: 0 2px 8px rgba(0, 32, 91, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 32, 91, 0.12);
+  --shadow-lg: 0 16px 32px rgba(0, 32, 91, 0.18);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   HEADER / NAVEGAÇÃO
+   ========================================================================== */
+header {
+  background-color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 4px solid var(--color-primary);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo img {
+  height: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--color-secondary);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-centered {
+  position: relative;
+  padding: 120px 0;
+  color: var(--color-bg-card);
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--color-primary);
+}
+
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 32, 91, 0.4) 0%, rgba(0, 20, 56, 0.65) 100%);
+  z-index: 2;
+}
+
+.hero-centered::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 60px solid var(--color-secondary);
+  border-left: 60px solid transparent;
+  z-index: 3;
+}
+
+.hero-content-center {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: var(--color-bg-card);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.hero-title-center {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-title-center span {
+  color: var(--color-secondary);
+}
+
+.hero-subtitle-center {
+  font-size: 1.2rem;
+  color: #E0E6ED;
+  margin-bottom: 35px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-buttons-center {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   BOTÕES E COMPONENTES DE AÇÃO
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.btn-whatsapp {
+  background-color: var(--color-accent-whatsapp);
+  color: var(--color-bg-card);
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--color-whatsapp-hover);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp-glow {
+  background-color: var(--color-accent-whatsapp);
+  color: var(--color-bg-card);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  transition: var(--transition);
+}
+
+.btn-whatsapp-glow:hover {
+  background-color: var(--color-whatsapp-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.btn-outline-gold {
+  border: 2px solid var(--color-secondary);
+  color: var(--color-bg-card);
+  background-color: var(--color-secondary);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  transform: translateY(-3px);
+}
+
+.btn-full {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-bg-card);
+}
+
+.btn-full:hover {
+  background-color: var(--color-secondary);
+}
+
+/* ==========================================================================
+   CAROUSEL / BANNER
+   ========================================================================== */
+.carousel-section {
+  padding: 50px 0;
+  background-color: var(--color-bg-alt);
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  min-height: 250px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 15px;
+}
+
+.carousel-btn {
+  background: rgba(0, 32, 91, 0.7);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.carousel-btn:hover {
+  background: var(--color-secondary);
+}
+
+/* ==========================================================================
+   SEÇÃO SOBRE & HISTÓRIA
+   ========================================================================== */
+#sobre {
+  padding: 80px 0;
+  background-color: #FFFFFF;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  font-weight: 800;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-secondary);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.about-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+}
+
+.about-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 50px !important;
+  width: 100% !important;
+}
+
+.about-video-wrapper {
+  flex: 0 0 45% !important;
+  max-width: 450px !important;
+}
+
+.about-video {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  border: 3px solid var(--color-primary);
+  display: block;
+}
+
+.about-content-side {
+  flex: 0 0 45% !important;
+  max-width: 450px !important;
+  text-align: left !important;
+}
+
+.about-feature-card {
+  background: var(--color-bg-light);
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 5px solid var(--color-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-feature-card h3 {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.about-feature-card p {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   SERVIÇOS (BANHO & TOSA)
+   ========================================================================== */
+.services-section {
+  padding: 80px 0;
+  background-color: var(--color-bg-light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: var(--color-bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.service-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-content {
+  padding: 25px;
+}
+
+.service-title {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.service-features {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.service-features li {
+  font-size: 0.9rem;
+  color: var(--color-text-dark);
+  margin-bottom: 5px;
+}
+
+.service-features li::before {
+  content: "✓";
+  color: var(--color-secondary);
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.service-price-box {
+  background-color: var(--color-bg-alt);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.price-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.price-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.promo-box .price-old {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+  margin-right: 8px;
+}
+
+.promo-box .price-value {
+  color: var(--color-secondary);
+}
+
+/* ==========================================================================
+   PRODUTOS & OFERTAS
+   ========================================================================== */
+#produtos {
+  padding: 80px 0;
+  background-color: var(--color-bg-alt);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.product-card {
+  background-color: var(--color-bg-card);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.product-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: var(--color-secondary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.product-badge.badge-recomendado {
+  background-color: var(--color-primary);
+}
+
+.product-img-wrapper {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.product-img-wrapper img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.product-title {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.product-subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+}
+
+.product-rating {
+  color: #FFC107;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+.product-rating-text {
+  color: var(--color-text-muted);
+}
+
+.product-features {
+  list-style: none;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.product-features li {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--color-text-dark);
+}
+
+.product-features i {
+  color: var(--color-secondary);
+  margin-right: 6px;
+}
+
+.product-price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+}
+
+.products-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ==========================================================================
+   FAQ (PERGUNTAS FREQUENTES) - BLOCO ESCURO
+   ========================================================================== */
+.faq-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0A0F1D 0%, #001438 100%);
+  color: var(--color-bg-card);
+}
+
+.faq-section .section-title {
+  color: var(--color-bg-card);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+
+.faq-item {
+  background-color: var(--color-bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--color-secondary);
+}
+
+.faq-item.active {
+  border-left-color: var(--color-secondary);
+}
+
+.faq-item.active .faq-question {
+  background-color: var(--color-primary);
+  color: var(--color-bg-card);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.faq-question .faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 20px 20px;
+  color: var(--color-text-muted);
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  padding-top: 20px;
+}
+
+.faq-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   CONTATO
+   ========================================================================== */
+.contact-section {
+  padding: 80px 0 100px 0;
+  /* Aumentado o padding inferior para dar respiro ao card */
+  background: linear-gradient(135deg, #001438 0%, #0A0F1D 100%);
+  color: var(--color-bg-card);
+}
+
+.contact-section .section-title {
+  color: var(--color-bg-card);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: #E0E6ED;
+}
+
+.contact-icon {
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-secondary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.quality-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-secondary);
+  margin-top: 25px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quality-box h4 {
+  color: var(--color-bg-card);
+  margin-bottom: 5px;
+}
+
+.quality-box p {
+  color: #B0BEC5;
+}
+
+.whatsapp-cta-card {
+  background: var(--color-bg-card);
+  padding: 35px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  border-top: 5px solid var(--color-accent-whatsapp);
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsapp-cta-paw {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.2rem;
+  opacity: 0.2;
+}
+
+.whatsapp-cta-icon {
+  font-size: 2.8rem;
+  color: var(--color-accent-whatsapp);
+  margin-bottom: 12px;
+}
+
+.whatsapp-cta-title {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.whatsapp-cta-text {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.whatsapp-cta-btn {
+  width: 100%;
+}
+
+/* ==========================================================================
+   FOOTER (RODAPÉ) - TEXTOS E LOGO NITIDOS
+   ========================================================================== */
+footer {
+  background-color: #0A0F1D;
+  color: #FFFFFF;
+  /* Branco puro para máxima nitidez */
+  padding: 50px 0 30px;
+  text-align: center;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-secondary);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-logo img {
+  /* Removemos o filtro que gerava serrilhado e usamos a cor real da logo branca */
+  height: 60px !important;
+  max-width: 250px !important;
+  width: auto !important;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.footer-slogan {
+  font-size: 1.05rem;
+  color: #E2E8F0;
+  /* Tom de branco/cinza claro sólido, sem transparência borrada */
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  width: 100%;
+  max-width: 600px;
+  padding-top: 18px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #94A3B8;
+  /* Cinza sólido mais encorpado para evitar efeito translúcido estranho */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   BOTÃO FLUTUANTE DO WHATSAPP
+   ========================================================================== */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--color-accent-whatsapp);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  background-color: var(--color-whatsapp-hover);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .hero-title-center {
+    font-size: 2rem;
+  }
+
+  .about-grid {
+    flex-direction: column !important;
+  }
+
+  .about-video-wrapper,
+  .about-content-side {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
