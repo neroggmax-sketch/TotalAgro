@@ -443,6 +443,7 @@ header {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  object-position: top center;
 }
 
 .service-content {
@@ -816,7 +817,7 @@ header {
    FOOTER (RODAPÉ) - TEXTOS E LOGO NITIDOS
    ========================================================================== */
 footer {
-  background-color: #0A0F1D;
+  background-color: var(--color-primary);
   color: #FFFFFF;
   /* Branco puro para máxima nitidez */
   padding: 50px 0 30px;
@@ -842,7 +843,6 @@ footer::before {
 }
 
 .footer-logo img {
-  /* Removemos o filtro que gerava serrilhado e usamos a cor real da logo branca */
   height: 60px !important;
   max-width: 250px !important;
   width: auto !important;
