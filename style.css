@@ -269,33 +269,46 @@ header {
    CAROUSEL / BANNER
    ========================================================================== */
 .carousel-section {
-  padding: 50px 0;
+  padding: 40px 0;
   background-color: var(--color-bg-alt);
 }
 
 .carousel-container {
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: var(--shadow-md);
-  min-height: 250px;
+  background-color: #0b1c36;
+  max-width: 100%;
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  align-items: center;
 }
 
 .carousel-slide {
   min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .carousel-slide img {
   width: 100%;
   height: auto;
-  max-height: 450px;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   display: block;
+  margin: 0 auto;
 }
 
 .carousel-controls {
@@ -306,21 +319,54 @@ header {
   justify-content: space-between;
   transform: translateY(-50%);
   padding: 0 15px;
+  pointer-events: none;
+  z-index: 5;
 }
 
 .carousel-btn {
-  background: rgba(0, 32, 91, 0.7);
+  pointer-events: auto;
+  background: rgba(0, 32, 91, 0.75);
+  backdrop-filter: blur(4px);
   color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
   transition: var(--transition);
 }
 
 .carousel-btn:hover {
   background: var(--color-secondary);
+  color: var(--color-bg-card);
+  transform: scale(1.1);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #CBD5E1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+  background-color: var(--color-secondary);
+  width: 24px;
+  border-radius: 6px;
 }
 
 /* ==========================================================================
