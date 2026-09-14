@@ -2,6 +2,15 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11316043742"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-11316043742');
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -15,6 +24,21 @@
     <meta name="description" content="Total Agro & Petshop - Cuidado, rações e produtos para o seu pet.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Event snippet for BOTÃO WHATSAPP conversion page -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-11316043742/RfjzCJWZ5_ccEN6_9JMq',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
 </head>
 
 <body>
@@ -36,7 +60,7 @@
                 <a href="#produtos">Produtos</a>
                 <a href="#contato">Contato</a>
                 <a href="https://wa.me/5511998928829" class="btn btn-whatsapp" target="_blank"
-                    rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Fale no WhatsApp</a>
+                    rel="noopener noreferrer" onclick="return gtag_report_conversion(this.href);"><i class="fab fa-whatsapp"></i> Fale no WhatsApp</a>
             </nav>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu de navegação">
                 <i class="fas fa-bars"></i>
@@ -60,7 +84,7 @@
 
                 <div class="hero-buttons-center">
                     <a href="https://wa.me/5511998928829" class="btn-whatsapp-glow" target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer" onclick="return gtag_report_conversion(this.href);">
                         <i class="fab fa-whatsapp"></i> Falar no WhatsApp
                     </a>
                     <a href="#servicos" class="btn-outline-gold">Nossos Serviços</a>
@@ -156,7 +180,7 @@
                         <div class="service-price-box">
                             <a href="https://wa.me/5511998928829?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Banho%20Essencial."
                                 class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"
-                                style="width: 100%; text-align: center;"><i class="fab fa-whatsapp"></i> Saiba Mais</a>
+                                style="width: 100%; text-align: center;" onclick="return gtag_report_conversion(this.href);"><i class="fab fa-whatsapp"></i> Saiba Mais</a>
                         </div>
                     </div>
                 </div>
@@ -175,7 +199,7 @@
                         <div class="service-price-box">
                             <a href="https://wa.me/5511998928829?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Tosa%20Higi%C3%AAnica."
                                 class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"
-                                style="width: 100%; text-align: center;"><i class="fab fa-whatsapp"></i> Saiba Mais</a>
+                                style="width: 100%; text-align: center;" onclick="return gtag_report_conversion(this.href);"><i class="fab fa-whatsapp"></i> Saiba Mais</a>
                         </div>
                     </div>
                 </div>
@@ -196,7 +220,7 @@
                         <div class="service-price-box">
                             <a href="https://wa.me/5511998928829?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Tosa%20na%20Tesoura."
                                 class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"
-                                style="width: 100%; text-align: center;"><i class="fab fa-whatsapp"></i> Saiba Mais</a>
+                                style="width: 100%; text-align: center;" onclick="return gtag_report_conversion(this.href);"><i class="fab fa-whatsapp"></i> Saiba Mais</a>
                         </div>
                     </div>
                 </div>
@@ -230,7 +254,7 @@
                         <li><i class="fas fa-eye"></i> Qualidade que você vê</li>
                     </ul>
                     <a href="https://wa.me/5511998928829?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20Banho%20Premium."
-                        class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><i
+                        class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion(this.href);"><i
                             class="fab fa-whatsapp"></i> Saiba mais</a>
                 </div>
 
@@ -253,7 +277,7 @@
                         <li><i class="fas fa-heart"></i> Bem-estar para seu pet</li>
                     </ul>
                     <a href="https://wa.me/5511998928829?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Antipulgas%20WellPet."
-                        class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><i
+                        class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion(this.href);"><i
                             class="fab fa-whatsapp"></i> Saiba Mais</a>
                 </div>
 
@@ -276,14 +300,14 @@
                         <li><i class="fas fa-shield-alt"></i> Proteção Natural</li>
                     </ul>
                     <a href="https://wa.me/5511998928829?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20F%C3%B3rmula%20Natural%20para%20Filhotes."
-                        class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><i
+                        class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion(this.href);"><i
                             class="fab fa-whatsapp"></i> Saiba Mais</a>
                 </div>
 
             </div>
             <div class="products-cta scroll-reveal">
                 <a href="https://wa.me/5511998928829" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"
-                    style="font-size: 1.2rem; padding: 15px 40px;">
+                    style="font-size: 1.2rem; padding: 15px 40px;" onclick="return gtag_report_conversion(this.href);">
                     <i class="fab fa-whatsapp"></i> Saiba mais
                 </a>
             </div>
@@ -307,7 +331,7 @@
                                 pelo
                                 WhatsApp.</p>
                             <a href="https://wa.me/5511998928829?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20banho%20e%20tosa."
-                                class="faq-whatsapp-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                class="faq-whatsapp-btn btn-whatsapp" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion(this.href);">
                                 <i class="fab fa-whatsapp"></i> Saiba mais
                             </a>
                         </div>
@@ -322,7 +346,7 @@
                             <p>Sim, entregamos as principais marcas de ração e produtos. Entre em contato para verificar
                                 prazos e taxa de entrega.</p>
                             <a href="https://wa.me/5511998928829?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20entrega%20de%20ra%C3%A7%C3%A3o."
-                                class="faq-whatsapp-btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                class="faq-whatsapp-btn btn-whatsapp" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion(this.href);">
                                 <i class="fab fa-whatsapp"></i> Saiba mais
                             </a>
                         </div>
@@ -382,7 +406,7 @@
                                 minutos.
                             </p>
                             <a href="https://wa.me/5511998928829?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20atendimento."
-                                class="btn-whatsapp-glow whatsapp-cta-btn" target="_blank" rel="noopener noreferrer">
+                                class="btn-whatsapp-glow whatsapp-cta-btn" target="_blank" rel="noopener noreferrer" onclick="return gtag_report_conversion(this.href);">
                                 <i class="fab fa-whatsapp"></i> Saiba mais
                             </a>
                         </div>
@@ -410,7 +434,7 @@
 
     <!-- Botão Flutuante -->
     <a href="https://wa.me/5511998928829" class="floating-whatsapp" target="_blank" rel="noopener noreferrer"
-        aria-label="Fale conosco no WhatsApp">
+        aria-label="Fale conosco no WhatsApp" onclick="return gtag_report_conversion(this.href);">
         <i class="fab fa-whatsapp"></i>
     </a>
 
