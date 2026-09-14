@@ -135,6 +135,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Google Ads Conversion: BOTÃO WHATSAPP ---
+    const whatsappButtons = document.querySelectorAll(
+        'a[href*="wa.me"], .btn-whatsapp, .btn-whatsapp-glow, .floating-whatsapp, .faq-whatsapp-btn, .whatsapp-cta-btn'
+    );
+
+    whatsappButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', { 'send_to': 'AW-11316043742/RfjzCJWZ5_ccEN6_9JMq' });
+            }
+        });
+    });
+
     // --- FAQ Accordion ---
     const faqQuestions = document.querySelectorAll('.faq-question');
 
