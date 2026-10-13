@@ -8,6 +8,8 @@
   --color-secondary-dark: #B8000A;
   --color-accent-whatsapp: #25D366;
   --color-whatsapp-hover: #1EBE5B;
+  --color-ifood: #EA1D2C;
+  --color-ifood-hover: #C71421;
 
   --color-bg-light: #EBF0FA;
   --color-bg-alt: #DFE7F5;
@@ -253,6 +255,63 @@ header {
   background-color: var(--color-secondary-dark);
   border-color: var(--color-secondary-dark);
   transform: translateY(-3px);
+}
+
+.btn-ifood {
+  background-color: var(--color-ifood);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(234, 29, 44, 0.35);
+}
+
+.btn-ifood:hover {
+  background-color: var(--color-ifood-hover);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(234, 29, 44, 0.5);
+}
+
+.btn-ifood-nav {
+  background-color: var(--color-ifood);
+  color: #FFFFFF !important;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(234, 29, 44, 0.35);
+  transition: var(--transition);
+}
+
+.btn-ifood-nav:hover {
+  background-color: var(--color-ifood-hover);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(234, 29, 44, 0.5);
+}
+
+.btn-ifood-hero {
+  background: linear-gradient(135deg, #EA1D2C 0%, #D11523 100%);
+  color: #FFFFFF !important;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 18px rgba(234, 29, 44, 0.45);
+  transition: var(--transition);
+}
+
+.btn-ifood-hero:hover {
+  background: linear-gradient(135deg, #FF2636 0%, #EA1D2C 100%);
+  color: #FFFFFF !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(234, 29, 44, 0.65);
 }
 
 .btn-full {
@@ -921,30 +980,261 @@ footer::before {
 }
 
 /* ==========================================================================
-   BOTÃO FLUTUANTE DO WHATSAPP
+   SEÇÃO IFOOD DELIVERY
    ========================================================================== */
-.floating-whatsapp {
+.ifood-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #001438 0%, #00205B 50%, #000F26 100%);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.ifood-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 45px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  position: relative;
+}
+
+.ifood-card::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(234, 29, 44, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ifood-content {
+  flex: 1 1 60%;
+}
+
+.ifood-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(234, 29, 44, 0.2);
+  color: #FF5A67;
+  border: 1px solid rgba(234, 29, 44, 0.4);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+.ifood-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  color: #FFFFFF;
+}
+
+.ifood-title span {
+  color: var(--color-ifood);
+  text-shadow: 0 0 20px rgba(234, 29, 44, 0.4);
+}
+
+.ifood-text {
+  font-size: 1.05rem;
+  color: #D1D9E6;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  max-width: 620px;
+}
+
+.ifood-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.ifood-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ifood-feature-item i {
+  font-size: 1.3rem;
+  color: var(--color-ifood);
+}
+
+.ifood-feature-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+}
+
+.ifood-feature-item span {
+  font-size: 0.8rem;
+  color: #9FB2CE;
+}
+
+.ifood-cta-box {
+  flex: 0 0 320px;
+  background: #FFFFFF;
+  color: var(--color-text-dark);
+  padding: 30px 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  border-top: 5px solid var(--color-ifood);
+}
+
+.ifood-logo-badge {
+  margin-bottom: 18px;
+}
+
+.ifood-brand-tag {
+  display: inline-block;
+  background-color: var(--color-ifood);
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 1.4rem;
+  font-style: italic;
+  padding: 4px 18px;
+  border-radius: 8px;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.ifood-store-name {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  margin-bottom: 5px;
+}
+
+.ifood-store-location {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.btn-ifood-cta {
+  background: linear-gradient(135deg, #EA1D2C 0%, #D11523 100%);
+  color: #FFFFFF !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(234, 29, 44, 0.4);
+  transition: var(--transition);
+  margin: 15px 0 10px 0;
+}
+
+.btn-ifood-cta:hover {
+  background: linear-gradient(135deg, #FF2636 0%, #EA1D2C 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(234, 29, 44, 0.6);
+  color: #FFFFFF !important;
+}
+
+.ifood-cta-subtext {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   BOTÕES FLUTUANTES (WHATSAPP & IFOOD)
+   ========================================================================== */
+.floating-actions {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background-color: var(--color-accent-whatsapp);
-  color: white;
-  width: 60px;
-  height: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 1000;
+}
+
+.floating-ifood,
+.floating-whatsapp {
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  z-index: 1000;
   text-decoration: none;
   transition: var(--transition);
+  position: relative;
+}
+
+.floating-whatsapp {
+  background-color: var(--color-accent-whatsapp);
+  color: white;
+  font-size: 1.9rem;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
 }
 
 .floating-whatsapp:hover {
   transform: scale(1.1);
   background-color: var(--color-whatsapp-hover);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.floating-ifood {
+  background-color: var(--color-ifood);
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 14px rgba(234, 29, 44, 0.45);
+}
+
+.floating-ifood:hover {
+  transform: scale(1.1);
+  background-color: var(--color-ifood-hover);
+  box-shadow: 0 6px 20px rgba(234, 29, 44, 0.65);
+}
+
+.floating-tooltip {
+  position: absolute;
+  right: 70px;
+  background-color: #1A1D20;
+  color: #FFFFFF;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.floating-ifood:hover .floating-tooltip,
+.floating-whatsapp:hover .floating-tooltip {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* ==========================================================================
@@ -971,6 +1261,53 @@ footer::before {
   .about-content-side {
     flex: 0 0 100% !important;
     max-width: 100% !important;
+  }
+
+  .ifood-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .ifood-title {
+    font-size: 1.7rem;
+  }
+
+  .ifood-cta-box {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .hero-buttons-center {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .hero-buttons-center a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .floating-actions {
+    bottom: 20px;
+    right: 20px;
+    gap: 10px;
+  }
+
+  .floating-ifood,
+  .floating-whatsapp {
+    width: 50px;
+    height: 50px;
+  }
+
+  .floating-whatsapp {
+    font-size: 1.6rem;
+  }
+
+  .floating-ifood {
+    font-size: 1.3rem;
   }
 
   .contact-grid {
