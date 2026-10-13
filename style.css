@@ -190,8 +190,18 @@ header {
 .hero-buttons-center {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 15px;
   flex-wrap: wrap;
+}
+
+.hero-buttons-center a,
+.hero-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
 }
 
 /* ==========================================================================
@@ -1516,21 +1526,29 @@ footer::before {
   }
 
   .hero-buttons-center {
-    flex-direction: column;
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    align-items: center;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    align-items: stretch !important;
+    gap: 12px !important;
   }
 
-  .hero-buttons-center a {
-    width: 100%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box;
+  .hero-buttons-center a,
+  .hero-btn {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    padding: 14px 20px !important;
+  }
+
+  .hero-buttons-center a i,
+  .hero-btn i {
+    flex-shrink: 0 !important;
   }
 
   .floating-actions {
