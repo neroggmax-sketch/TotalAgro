@@ -622,11 +622,239 @@ header {
   background-color: var(--color-bg-alt);
 }
 
+/* Banner Promoção Relâmpago */
+.promo-flash-banner {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+  border: 2px solid #E30613;
+  border-radius: 20px;
+  padding: 35px;
+  margin-top: 35px;
+  margin-bottom: 45px;
+  box-shadow: 0 12px 35px rgba(227, 6, 19, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-flash-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #E30613 0%, #FFB703 50%, #E30613 100%);
+}
+
+.promo-flash-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #E30613 0%, #B8000A 100%);
+  color: #FFFFFF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(227, 6, 19, 0.3);
+  animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.promo-flash-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.promo-flash-image {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: #000;
+  max-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-flash-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.promo-flash-banner:hover .promo-flash-image img {
+  transform: scale(1.04);
+}
+
+.promo-discount-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #E30613;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.promo-flash-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #FEF3C7;
+  color: #B45309;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.promo-flash-title {
+  color: var(--color-primary);
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.promo-flash-desc {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.promo-flash-pricing {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background-color: #F1F5F9;
+  border-radius: 12px;
+  border-left: 4px solid var(--color-secondary);
+}
+
+.promo-price-from {
+  font-size: 1.15rem;
+  color: #64748B;
+  text-decoration: line-through;
+}
+
+.promo-price-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-price-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.promo-price-big {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: var(--color-secondary);
+  line-height: 1;
+}
+
+.promo-price-big small {
+  font-size: 1.3rem;
+}
+
+.promo-cashback-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 3px 10px rgba(16, 185, 129, 0.3);
+}
+
+.promo-flash-perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.promo-flash-perks span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.promo-flash-perks span i {
+  color: #10B981;
+}
+
+.promo-flash-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.promo-btn-glow {
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+@media (max-width: 900px) {
+  .promo-flash-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .promo-flash-image {
+    max-height: 320px;
+    margin: 0 auto;
+    max-width: 320px;
+  }
+  .promo-flash-image img {
+    height: 320px;
+  }
+  .promo-flash-pricing {
+    justify-content: center;
+  }
+  .promo-flash-perks {
+    justify-content: center;
+  }
+  .promo-flash-actions {
+    justify-content: center;
+  }
+}
+
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
 }
 
 .product-card {
@@ -1312,5 +1540,74 @@ footer::before {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Otimização Mobile Promoção Relâmpago */
+  .promo-flash-banner {
+    padding: 24px 16px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+  }
+
+  .promo-flash-title {
+    font-size: 1.45rem;
+  }
+
+  .promo-flash-desc {
+    font-size: 0.95rem;
+  }
+
+  .promo-flash-badge {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    margin-bottom: 18px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .promo-flash-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .promo-flash-image {
+    max-height: 260px;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .promo-flash-image img {
+    height: 260px;
+  }
+
+  .promo-flash-pricing {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 12px;
+  }
+
+  .promo-price-big {
+    font-size: 2.1rem;
+  }
+
+  .promo-flash-perks {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .promo-flash-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .promo-flash-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 }
